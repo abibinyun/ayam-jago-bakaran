@@ -63,7 +63,7 @@ export default async function LocationsPage() {
                 {location.latitude && location.longitude && (
                   <div className="mt-4 aspect-video w-full overflow-hidden rounded-md bg-muted">
                     <Image
-                      src={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s+e25822(${location.longitude},${location.latitude})/${location.longitude},${location.latitude},14,0/600x400?access_token=YOUR_MAPBOX_TOKEN`}
+                      src={`https://maps.locationiq.com/v3/staticmap?key=pk.4047829aa6231ca36a452ac9eba83b82&center=${location.latitude},${location.longitude}&zoom=16&size=600x400&markers=icon:small-red-cutout|${location.latitude},${location.longitude}`}
                       alt={`Map of ${location.name}`}
                       width={600}
                       height={400}

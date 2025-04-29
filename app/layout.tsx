@@ -36,6 +36,7 @@ export default async function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="apple-mobile-web-app-title" content="Ayam Jago Bakaran" />
       </head>
       <body className={inter.className}>

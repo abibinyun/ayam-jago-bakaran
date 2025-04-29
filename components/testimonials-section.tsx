@@ -66,8 +66,8 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-4">
-              <CarouselPrevious className="relative static translate-y-0 mr-2" />
-              <CarouselNext className="relative static translate-y-0" />
+              <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10" />
+              <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10" />
             </div>
           </Carousel>
         </div>
