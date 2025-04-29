@@ -8,6 +8,12 @@ import { FeaturedMenu } from "@/components/featured-menu";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { GallerySection } from "@/components/gallery-section";
 
+const AyamImage = () => {
+  const src = "https://wnhyycdfdhfpljqlhedx.supabase.co/storage/v1/object/public/assets/img/ayam-jago-bakaran-enak.webp";
+
+  return <Image src={src || "/placeholder.svg?height=550&width=550"} alt="Ayam Jago Bakaran" width={550} height={550} className="mx-auto w-full h-auto object-cover" />;
+};
+
 export const metadata: Metadata = {
   title: "Home",
   description: "Ayam Jago Bakaran - Kelezatan Ayam Bakar Asli Indonesia",
@@ -49,7 +55,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover">
-              <Image src="/placeholder.svg?height=550&width=550" alt="Ayam Jago Bakaran" width={550} height={550} className="mx-auto h-auto w-full object-cover" />
+              <AyamImage />
             </div>
           </div>
         </div>
@@ -77,7 +83,9 @@ export default async function Home() {
                 <Link href="/menu">Lihat Menu</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/contact">Hubungi Kami</Link>
+                <Link href="/contact" className="text-orange-900">
+                  Hubungi Kami
+                </Link>
               </Button>
             </div>
           </div>

@@ -37,10 +37,11 @@ export function SiteHeader({ settings }: SiteHeaderProps) {
               </Link>
             </Button>
           )}
-          <Button variant="outline" size="sm" className="hidden md:flex">
+          {/* Button order online */}
+          {/* <Button variant="outline" size="sm" className="hidden md:flex">
             <ShoppingBag className="mr-2 h-4 w-4" />
             Order Online
-          </Button>
+          </Button> */}
           <MobileNav settings={settings} />
         </div>
       </div>

@@ -79,10 +79,11 @@ export function MobileNav({ settings }: MobileNavProps) {
             </Link>
           ))}
           <div className="mt-4 px-6 py-2">
-            <Button className="w-full" size="sm">
+            {/* Button order online */}
+            {/* <Button className="w-full" size="sm">
               <ShoppingBag className="mr-2 h-4 w-4" />
               Order Online
-            </Button>
+            </Button> */}
           </div>
           {settings?.phone && (
             <div className="px-6 py-2">
