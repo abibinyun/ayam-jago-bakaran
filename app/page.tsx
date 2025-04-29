@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/hero-section";
 import { FeaturedMenu } from "@/components/featured-menu";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { GallerySection } from "@/components/gallery-section";
+import FloatingWhatsAppButton from "@/components/floating-button";
 
 const AyamImage = () => {
   const src = "https://wnhyycdfdhfpljqlhedx.supabase.co/storage/v1/object/public/assets/img/ayam-jago-bakaran-enak.webp";
@@ -91,6 +92,13 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <FloatingWhatsAppButton
+        phone="6282297463806"
+        message="Halo Ayam Jago Bakaran, saya mau pesan ayam bakarnya!"
+        iconSrc="/wa.png" // ganti dengan path gambar WA kamu
+        fallbackSrc="/wa-fallback.svg" // gambar fallback
+      />
     </div>
   );
 }
