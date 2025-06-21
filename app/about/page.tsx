@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
+import { RotateCcwIcon, CookingPot, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -28,10 +29,12 @@ export default async function AboutPage() {
         </div>
         <div className="space-y-4">
           {page?.content ? (
-            <div dangerouslySetInnerHTML={{ __html: page.content }} />
+            <article className="prose prose-neutral max-w-none">
+              <div dangerouslySetInnerHTML={{ __html: page.content }} />
+            </article>
           ) : (
-            <>
-              <h2 className="text-2xl font-bold">Our Story</h2>
+            <article className="prose prose-neutral max-w-none">
+              <h2>Our Story</h2>
               <p>
                 Ayam Jago Bakaran was founded in 2010 with a simple mission: to bring authentic Indonesian grilled chicken to food lovers everywhere. What started as a small food stall has grown into multiple locations across the country.
               </p>
@@ -39,7 +42,7 @@ export default async function AboutPage() {
                 Our secret recipe has been passed down through generations, combining traditional Indonesian spices with modern cooking techniques to create a unique and delicious flavor profile that keeps our customers coming back for
                 more.
               </p>
-              <h2 className="text-2xl font-bold mt-8">Our Commitment</h2>
+              <h2>Our Commitment</h2>
               <p>
                 We are committed to using only the freshest ingredients and highest quality chicken. Our signature marinade is made fresh daily, and our chicken is grilled to perfection over real charcoal to give it that authentic smoky
                 flavor.
@@ -48,7 +51,7 @@ export default async function AboutPage() {
                 At Ayam Jago Bakaran, we believe in providing not just great food, but also exceptional service. Our team is dedicated to ensuring that every customer has a memorable dining experience, whether they're eating in our
                 restaurant or taking their food to go.
               </p>
-            </>
+            </article>
           )}
         </div>
       </div>
@@ -56,21 +59,24 @@ export default async function AboutPage() {
       <div className="mt-24 grid gap-8 md:grid-cols-3">
         <div className="text-center">
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary">
-            <Image src="/placeholder.svg?height=40&width=40" alt="Fresh Ingredients" width={40} height={40} className="h-10 w-10" />
+            <RotateCcwIcon color="white" />
+            {/* <Image src="/placeholder.svg?height=40&width=40" alt="Fresh Ingredients" width={40} height={40} className="h-10 w-10" /> */}
           </div>
           <h3 className="mt-4 text-xl font-bold">Fresh Ingredients</h3>
           <p className="mt-2 text-muted-foreground">We use only the freshest ingredients in all our dishes.</p>
         </div>
         <div className="text-center">
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary">
-            <Image src="/placeholder.svg?height=40&width=40" alt="Traditional Recipe" width={40} height={40} className="h-10 w-10" />
+            <CookingPot color="white" />
+            {/* <Image src="/placeholder.svg?height=40&width=40" alt="Traditional Recipe" width={40} height={40} className="h-10 w-10" /> */}
           </div>
           <h3 className="mt-4 text-xl font-bold">Traditional Recipe</h3>
           <p className="mt-2 text-muted-foreground">Our recipes have been passed down through generations.</p>
         </div>
         <div className="text-center">
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary">
-            <Image src="/placeholder.svg?height=40&width=40" alt="Quality Service" width={40} height={40} className="h-10 w-10" />
+            <ShieldCheck color="white" />
+            {/* <Image src="/placeholder.svg?height=40&width=40" alt="Quality Service" width={40} height={40} className="h-10 w-10" /> */}
           </div>
           <h3 className="mt-4 text-xl font-bold">Quality Service</h3>
           <p className="mt-2 text-muted-foreground">We are dedicated to providing exceptional service to our customers.</p>
